@@ -47,6 +47,7 @@ $(document).ready(function() {
 		var id = document.forms["frm"]["Pcommentid"].value;
 		var name = document.forms["frm"]["name"].value;
 		var msg = document.forms["frm"]["msg"].value;
+		var img = document.forms["frm"]["img"].value;
 		if(name!="" && msg!=""){
 			$.ajax({
 				url: "save.php",
@@ -54,7 +55,8 @@ $(document).ready(function() {
 				data: {
 					id: id,
 					name: name,
-					msg: msg,			
+					msg: msg,
+					img: img,		
 				},
 				cache: false,
 				success: function(dataResult){
@@ -64,6 +66,7 @@ $(document).ready(function() {
 						document.forms["frm"]["Pcommentid"].value = "";
 						document.forms["frm"]["name"].value = "";
 						document.forms["frm"]["msg"].value = "";
+						document.forms["frm"]["img"].value= "";
 						LoadData(); 						
 					}
 					else if(dataResult.statusCode==201){
@@ -86,6 +89,7 @@ $(document).ready(function() {
 		var id = document.forms["frm1"]["Rcommentid"].value;
 		var name = document.forms["frm1"]["Rname"].value;
 		var msg = document.forms["frm1"]["Rmsg"].value;
+		var img = document.forms["frm1"]["Rimg"].value;
 		if(name!="" && msg!=""){
 			$.ajax({
 				url: "save.php",
@@ -93,7 +97,8 @@ $(document).ready(function() {
 				data: {
 					id: id,
 					name: name,
-					msg: msg,			
+					msg: msg,
+					img: img,		
 				},
 				cache: false,
 				success: function(dataResult){
@@ -103,6 +108,7 @@ $(document).ready(function() {
 						document.forms["frm1"]["Rcommentid"].value = "";
 						document.forms["frm1"]["Rname"].value = "";
 						document.forms["frm1"]["Rmsg"].value = "";
+						document.forms["frm1"]["Rimg"].value = "";
 						LoadData(); 
 						$("#ReplyModal").modal("hide");
 					}

@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
               <label for="">Image :</label>
-              <input type="file" name="image" class="form-control">
+              <input type="file" name="img" class="form-control">
             </div>
         	 <input type="button" id="btnreply" name="btnreply" class="btn btn-primary" value="Reply">
       </form>
@@ -62,7 +62,7 @@
     </div>
     <div class="form-group">
       <label for="">Image :</label>
-      <input type="file" name="image" class="form-control">
+      <input type="file" name="img" class="form-control">
     </div>
 	 <input type="button" id="butsave" name="save" class="btn btn-primary" value="Send">
   </form>
